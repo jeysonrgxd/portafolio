@@ -491,7 +491,7 @@ figure.logo img{
 
   .menu {
     position: fixed;
-    background: rgba(5, 111, 255, .9);
+    background: rgba(239, 198, 0,.9);
     z-index: 3;
     top: 0;
     left: -100vw;
