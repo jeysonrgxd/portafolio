@@ -21,7 +21,7 @@
     <header class="header">
       <div class="container">
         <figure class="logo">
-          <img src="images/logo.png" height="50" alt="Logo de http://leonidasesteban.com" />
+          <img src="images/logo.png" height="50" alt="" />
         </figure>
         <nav class="menu">
           <ol>
@@ -140,23 +140,21 @@
           <button>Enviar</button>
         </form>
         <div class="social">
-          <a href="https://twitter.com/leonidasesteban" class="social-link twitter"></a>
-          <a href="https://facebook.com/leonidas.esteban" class="social-link facebook"></a>
-          <a href="https://github.com/leonidasesteban" class="social-link github"></a>
-          <a href="https://instagram.com/leonidasesteban" class="social-link instagram"></a>
+          <h3>Repositorio: </h3>
+          <a href="https://github.com/jeysonrgxd" class="social-link github" title="Mi GitHub"></a>
         </div>
       </div>
     </section>
     <footer class="footer">
       <div class="container">
         <div>
-          <p>Curso de Desarrollo web online 2018 <img src="images/platzi.png" width="80" alt="platzi"></p>
+          <p>Copyright © 2020 Jeyson Ramos <img src="images/logo.png" width="20" title="JeysonRG"></p>
         </div>
-        <div>
+        <!-- <div>
           <p>
-            Designed with ❤️ by <a href="https://twitter.com/thespianartist">@thespianartist</a>
+            <a href="https://github.com/jeysonrgxd">@github</a>
           </p>
-        </div>
+        </div> -->
       </div>
     </footer>
     <script>
@@ -189,13 +187,14 @@
         }
       }
 
-      fetch("https://frozen-fjord-75081.herokuapp.com/usuario")
-      .then(resp => {
-        return resp.json()
-      })
-      .then(resp => {
-        console.log(resp.usuario);
-      })
+      // prueba para ver si las paginas de git pages aceptan peticiones HTPPRequest
+      // fetch("https://frozen-fjord-75081.herokuapp.com/usuario")
+      // .then(resp => {
+      //   return resp.json()
+      // })
+      // .then(resp => {
+      //   console.log(resp.usuario);
+      // })
     </script>
   </body>
 </html>

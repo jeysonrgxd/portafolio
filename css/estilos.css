@@ -260,7 +260,7 @@ figure.logo img{
   background-color: #1b2127;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
@@ -313,9 +313,10 @@ figure.logo img{
 }
 
 .contact {
-  background-color: #056fff;
+  background-color: var(--fondo);
   color: white;
   height: 150px;
+  padding: 17px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -323,6 +324,7 @@ figure.logo img{
 }
 
 .social {
+  display: flex;
 }
 
 .social-link {
@@ -330,7 +332,11 @@ figure.logo img{
   width: 50px;
   height: 50px;
   margin: 0 10px;
+  transition: filter .4s;
   background-size: 50px 50px;
+}
+.social-link:hover{
+  filter: invert(1);
 }
 
 .social-link.twitter {
@@ -370,6 +376,7 @@ figure.logo img{
 }
 
 .form-email h3 { 
+  color: var(--amarillo);
   font-family: 'Source Sans Pro', sans-serif;
 }
 
