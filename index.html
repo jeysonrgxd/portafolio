@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Source+Sans+Pro" rel="stylesheet">
     <!-- <link rel="stylesheet" href="css/media.css" media="screen and (max-width:768px)"/> -->
     <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/modal.css">
     <!-- <style>
       @media screen and (max-width: 768px) {
         body {
@@ -49,36 +50,52 @@
     <section id="portafolio" class="portfolio">
       <div class="container">
         <h2>Portafolio (Proyectos Destacados)</h2>
-      <article class="project">
-        <div class="project-details">
-          <h3 class="project-title">Platzi Video</h3>
-          <h6 class="project-course">React Native / React</h6>
-          <p class="project-date"><small><strong>Fecha:</strong> 01/07/2018</small></p>
-          <p class="project-url"><small><strong>Puedes verlo en:</strong> www.platzi.com/native</small></p>
-          <p class="project-description">Platzi Video fue el resultado de 3 meses de trabajo
-              para crear la mejor app para enseñar el funcionamiento
-              de React y React Native. Desde crear un vista-detalle, hasta patrones avanzados de nevegación, este proyecto ha sido el ejemplo de futuros creadores de aplicaciones multiplataforma</p>
-        </div>
-        <figure class="project-imageContainer">
-          <img class="project-image" width="500" src="images/platzi-video-react-native.png" alt="prouyecto del curso de React Native">
-        </figure>
-      </article>
-      <article class="project">
+        <article class="project">
           <div class="project-details">
-            <h3 class="project-title">Platzi Video</h3>
-            <h6 class="project-course">React Native / React</h6>
-            <p class="project-date"><small><strong>Fecha:</strong> 01/07/2018</small></p>
-            <p class="project-url"><small><strong>Puedes verlo en:</strong> www.platzi.com/native</small></p>
-            <p class="project-description">Platzi Video fue el resultado de 3 meses de trabajo
-                para crear la mejor app para enseñar el funcionamiento
-                de React y React Native. Desde crear un vista-detalle, hasta patrones avanzados de nevegación, este proyecto ha sido el ejemplo de futuros creadores de aplicaciones multiplataforma</p>
+            <h3 class="project-title">Academia Loreal</h3>
+            <h6 class="project-course">HTML5 WP JS Bootstrap / Php Mysql</h6>
+            <!-- <p class="project-date"><small><strong>Fecha:</strong> 01/07/2018</small></p> -->
+            <p class="project-url"><small><strong>Puedes verlo en:</strong> https://academialorealperu.pe/</small></p>
+            <p class="project-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti nulla quis eos quia asperiores pariatur sit aut. Eius velit earum accusantium, dolor numquam blanditiis. Voluptatem atque id nesciunt ea asperiores!</p>
           </div>
           <figure class="project-imageContainer">
-            <img class="project-image" width="500" src="images/platzi-video-react-native.png" alt="prouyecto del curso de React Native">
+            <img class="project-image" width="500" src="images/loreal/loreal_prin.png" data-carp="loreal" alt="">
+          </figure>
+        </article>
+        <article class="project">
+          <div class="project-details">
+            <h3 class="project-title">Autoland</h3>
+            <h6 class="project-course">HTML5 WP JS Bootstrap / Php Mysql</h6>
+            <!-- <p class="project-date"><small><strong>Fecha:</strong> 01/07/2018</small></p> -->
+            <p class="project-url"><small><strong>Puedes verlo en:</strong> https://autoland.com.pe/</small></p>
+            <p class="project-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti nulla quis eos quia
+              asperiores pariatur sit aut. Eius velit earum accusantium, dolor numquam blanditiis. Voluptatem atque id nesciunt
+              ea asperiores!</p>
+          </div>
+          <figure class="project-imageContainer">
+            <img class="project-image" width="500" src="images/autoland/autoland_prin.png" data-carp="autoland"
+              alt="">
+          </figure>
+        </article>
+        <article class="project">
+          <div class="project-details">
+            <h3 class="project-title">Andean Lodge</h3>
+            <h6 class="project-course">HTML5 WP JS Bootstrap / Php Mysql</h6>
+            <!-- <p class="project-date"><small><strong>Fecha:</strong> 01/07/2018</small></p> -->
+            <p class="project-url"><small><strong>Puedes verlo en:</strong> https://autoland.com.pe/</small></p>
+            <p class="project-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti nulla quis eos quia
+              asperiores pariatur sit aut. Eius velit earum accusantium, dolor numquam blanditiis. Voluptatem atque id nesciunt
+              ea asperiores!</p>
+          </div>
+          <figure class="project-imageContainer">
+            <img class="project-image" width="500" src="images/andean/andean_prin.png" data-carp="andean" alt="">
           </figure>
         </article>
       </div>
       
+      <div class="container cont-btn-mas">
+        <button class="cargar-mas">Ver Más</button>
+      </div>
     </section>
     <div class="container">
       <h2 class="event-list-title">Más sobre mi experiencia</h2>
@@ -157,44 +174,18 @@
         </div> -->
       </div>
     </footer>
-    <script>
-      // console.log('Hola mundo! es mi primera linea en JS');
-      const ipad = window.matchMedia('screen and (max-width: 767px)')
-      const menu = document.querySelector('.menu');
-      // console.log(menu);
-      const burgerButton = document.querySelector('#burger-menu');
-      // console.log(burgerButton);
 
-      console.log(ipad);
-      ipad.addListener(validation)
-
-      function validation(event) {
-        // console.log(event);
-        if (event.matches) {
-          burgerButton.addEventListener('click', hideShow)
-        } else {
-          burgerButton.removeEventListener('click', hideShow)
-        }
-      }
-      validation(ipad);
-
-
-      function hideShow() {
-        if (menu.classList.contains('is-active')) {
-          menu.classList.remove('is-active');
-        } else {
-          menu.classList.add('is-active');
-        }
-      }
-
-      // prueba para ver si las paginas de git pages aceptan peticiones HTPPRequest
-      // fetch("https://frozen-fjord-75081.herokuapp.com/usuario")
-      // .then(resp => {
-      //   return resp.json()
-      // })
-      // .then(resp => {
-      //   console.log(resp.usuario);
-      // })
-    </script>
+    <div class="modal-project">
+      <div class="modal-cont-img">
+        <img src="" alt="">
+        <div class="lds-ring">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    </div>
+    <script src="./main.js" type="module"></script>
   </body>
 </html>

@@ -67,6 +67,7 @@ valores */
 body {
   font-family: 'Source Sans Pro', sans-serif;
   margin: 0;
+  position: relative;
 }
 
 h1, 
@@ -101,7 +102,57 @@ h2 {
   font-size: 24px;
   margin-bottom: 40px;
 }
+/*================ menu =========================== */
+.header {
+  background-color: var(--fondo);
+  color: white;
+  display: flex;
+  height: 70px;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
 
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+figure {
+  margin: 0;
+}
+
+figure.logo img {
+  margin-top: 10px;
+}
+
+.header a {
+  color: white;
+  text-decoration: none;
+}
+
+.menu {
+  height: inherit;
+}
+
+.header ol {
+  display: flex;
+  height: inherit;
+}
+
+.header ol li {
+  height: inherit;
+}
+
+.header a {
+  display: flex;
+  align-items: center;
+  height: inherit;
+  padding: 0 10px;
+}
+/* =============== Portada ======================= */
 .hero {
   height: 300px;
   background-image: url('../images/code_background.png');
@@ -126,7 +177,7 @@ h2 {
   object-fit: cover;
 } */
 
-
+/* ==================== proyectos destacados =========================== */
 .portfolio {
   background: #fafafa;
   padding: 20px;
@@ -134,25 +185,9 @@ h2 {
 }
 
 .project {
-  /* border-top: 10px solid red;
-  border-right: 10px solid green;
-  border-left: 10px solid orange;
-  border-bottom: 10px solid pink; */
-  /* color: blue; */
-  /* border-top-color: red;
-  border-top-width: 15px;
-  border-top-style: solid; */
   border: 1px solid gray;
   border-radius: 10px;
-  /* border-top-left-radius: 50px;
-  border-top-right-radius: 10px;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px; */
-  /* margin: 10px; */
   margin-bottom: 15px;
-  /* margin-right
-  margin-left 
-  margin-top */
   padding: 20px;
   background: white;
   display: flex;
@@ -171,9 +206,6 @@ h2 {
 .project strong {
   font-family: 'Fjalla One', sans-serif;
 }
-/* .project-date {
-  margin: 10px 0;
-} */
 
 .project-title {
   font-size: 30px;
@@ -192,58 +224,33 @@ h2 {
 
 .project-imageContainer img {
   max-width: 100%;
+  cursor: pointer;
+  height: 400px;
+  object-fit: contain;      
 }
+/* ======== Boton cargas mas ========= */
+.cont-btn-mas button{
+  display: block;
+  margin: 0 auto;
+  padding: 10px 20px;
+  border: 1px solid var(--fondo);
+  background-color: transparent;
+  color: var(--fondo);
+  border-radius: 5px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all .3s ease-out;
+} 
 
-.header {
-  background-color: var(--fondo);
-  color: white;
-  display: flex;
-  height: 70px;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-ol,
-ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-figure {
-  margin: 0;
-}
-
-figure.logo img{
-  margin-top: 10px;
-}
-.header a {
-  color: white;
-  text-decoration: none;
-}
-.menu {
-  height: inherit;
-}
-.header ol {
-  display: flex;
-  height: inherit;
-}
-.header ol li {
-  height: inherit;
-}
-.header a {
-  display: flex;
-  align-items: center;
-  height: inherit;
-  padding: 0 10px;
+.cont-btn-mas button:hover{
+ background-color: var(--fondo);
+ color: #fff;
 }
 
 .flexbox {
   display: flex;
-  /* flex-wrap: nowrap; */
   flex-wrap: wrap;
-  /* flex-direction: column; */
+
 }
 
 .box {
@@ -254,6 +261,8 @@ figure.logo img{
 
   flex-shrink: 0;
 }
+
+/* ======================= Footer  ==================================*/
 
 .footer {
   color: white;
