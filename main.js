@@ -1,4 +1,4 @@
-import modalScript from './js/modal.js'
+import modalScript from './js/modal.JS'
 
 const ipad = window.matchMedia('screen and (max-width: 767px)')
 const menu = document.querySelector('.menu')
