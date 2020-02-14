@@ -19,12 +19,26 @@
 }
 
 .modal-cont-img{
-   background-color: #f3f3f3;
+   /* background-color: #f3f3f3; */
    width: 800px;
    height: 700px;
+   position: relative;
    overflow: auto;
-  
+   
 }
+.modal-cont-img.animate {
+   animation: opa 1 .4s linear;
+}
+
+@keyframes opa{
+   0%{
+      opacity: 0;
+   }
+   100%{
+      opacity: 1;
+   }
+}
+
 .modal-cont-img img{
    width: 100%;
 }
@@ -32,7 +46,10 @@
 /* loader */
 .lds-ring {
    display: inline-block;
-   position: relative;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%,-50%);
    width: 80px;
    height: 80px;
 }
@@ -69,5 +86,87 @@
 
    100% {
       transform: rotate(360deg);
+   }
+}
+
+/* botones nex y previous */
+.btNext, 
+.btPrev {
+   position: absolute;
+   color: #fff;
+   font-size: 35px;
+   cursor: pointer;
+   transition: color .3s;
+   border: 2px solid #fff;
+   padding: 0px 5px;
+   border-radius: 5px;
+}
+.btNext{
+   right: 20%;
+   top: 50%;
+   transform: translateY(-50%);
+}
+.btPrev {
+   left: 20%;
+   top: 50%;
+   transform: translateY(-50%);
+}
+.btNext:hover,
+.btPrev:hover{
+   color:#dadada;
+}
+
+/* mediaquery */
+@media (max-width:1550px){
+   .btNext{
+      right: 15%;
+   }
+   .btPrev{
+      left: 15%;
+   }
+}
+@media (max-width:1300px){
+   .btNext{
+      right: 10%;
+   }
+   .btPrev{
+      left: 10%;
+   }
+}
+@media (max-width:1140px){
+   .btNext{
+      right: 5%; 
+   }
+   .btPrev{
+      left: 5%;
+   }
+}
+@media (max-width:1015px){
+   .btNext{
+      right: 5%; 
+   }
+   .btPrev{
+      left: 5%;
+   }
+   .modal-cont-img {
+      width: 700px;
+   }
+}
+@media (max-width:900px){
+   .btNext {
+      right: 1%;
+   }
+
+   .btPrev {
+      left: 1%;
+   }
+   .btNext,
+   .btPrev {
+      font-size: 28px;
+   }
+}
+@media (max-height:700px){
+   .modal-cont-img {
+      height: 500px;
    }
 }

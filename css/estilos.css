@@ -63,6 +63,9 @@ valores */
   content: "\e900";
 }
 
+*{
+  scroll-behavior: smooth;
+}
 
 body {
   font-family: 'Source Sans Pro', sans-serif;
@@ -226,7 +229,12 @@ figure.logo img {
   max-width: 100%;
   cursor: pointer;
   height: 400px;
-  object-fit: contain;      
+  object-fit: contain;
+  transition: filter .3s;
+}
+.project-imageContainer img:hover{
+  filter: contrast(.8);
+
 }
 /* ======== Boton cargas mas ========= */
 .cont-btn-mas button{
@@ -280,8 +288,8 @@ figure.logo img {
 .footer a {
   color: white;
 }
-
-.event-list {
+/* ================== M?s sobre mi experiencia ==================== */
+/* .event-list {
   display: flex;
   flex-wrap: wrap;
 }
@@ -319,12 +327,34 @@ figure.logo img {
   padding: 5px 20px;
   text-decoration: none;
   border-radius: 5px;
-}
+} */
 
+/* ======================= HABILIDADES ================================ */
+.habilidades .cont-grid{
+  display: grid;
+  /* grid-template-columns: repeat(3, 1fr); */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  /* grid-template-rows: auto auto auto auto; */
+  grid-gap: 15px;
+  margin: 20px 0;
+}
+.cont-grid .item_hab{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  box-shadow: 0px 0px 2px var(--fondo);
+  padding: 10px;
+}
+.cont-grid .item_hab img{
+  width: 100px;
+}
+.cont-grid .item_hab p {
+  padding: 0 7px;
+}
 .contact {
   background-color: var(--fondo);
   color: white;
-  height: 150px;
   padding: 17px;
   display: flex;
   align-items: center;
@@ -361,7 +391,10 @@ figure.logo img {
   background-image: url('../images/instagram.svg');
 }
 
-
+.form-email{
+  display: flex;
+  flex-direction: column;
+}
 .form-email input {
   border-color: gray;
   border-style: solid;
@@ -372,8 +405,18 @@ figure.logo img {
   background-repeat: no-repeat;
   background-position-y: center;
   background-position-x: 5px;
+  margin-bottom: 5px;
+  outline: none;
 }
-
+.form-email textarea{
+  resize: none;
+  height: 50px;
+  border-radius: 5px;
+  padding: 5px 10px;
+  border-color: gray;
+  outline: none;
+  font-family: arial
+}
 .form-email button {
   display: block;
   background: transparent;
@@ -382,6 +425,9 @@ figure.logo img {
   border-radius: 5px;
   width: 100px;
   margin-top: 10px;
+  cursor: pointer;
+  outline: none;
+  
 }
 
 .form-email h3 { 
