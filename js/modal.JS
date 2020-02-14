@@ -40,7 +40,9 @@ const modalScript = function(modal,loader,cont){
    })
 
    btNext.addEventListener("click", (e) => {
-      cont_img.src = ""
+      if (arrayImage.length !== 1) {
+         cont_img.src = ""
+      }
       loader.style.display = "block"
       if(arrayImage.length !== 0){
          // cont.classList.add("animate")
@@ -59,7 +61,9 @@ const modalScript = function(modal,loader,cont){
    })
 
    btPrev.addEventListener("click", (e) => {
-      cont_img.src = ""
+      if (arrayImage.length !== 1){
+         cont_img.src = ""
+      }
       loader.style.display = "block"
       if (arrayImage.length !== 0) {
          // cont.classList.add("animate")
