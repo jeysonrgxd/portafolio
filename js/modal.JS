@@ -40,8 +40,9 @@ const modalScript = function(modal,loader,cont){
    })
 
    btNext.addEventListener("click", (e) => {
+      loader.style.display = "block"
       if(arrayImage.length !== 0){
-         cont.classList.add("animate")
+         // cont.classList.add("animate")
          if(contador < arrayImage.length-1){
             contador++
             cont_img.src=arrayImage[contador]
@@ -57,8 +58,9 @@ const modalScript = function(modal,loader,cont){
    })
 
    btPrev.addEventListener("click", (e) => {
+      loader.style.display = "block"
       if (arrayImage.length !== 0) {
-         cont.classList.add("animate")
+         // cont.classList.add("animate")
          if (contador !== 0) {
             contador--
             cont_img.src = arrayImage[contador]
@@ -72,7 +74,8 @@ const modalScript = function(modal,loader,cont){
          return false;
       }
    })
-   cont.addEventListener("animationend", e => cont.classList.remove("animate"))
+   // cont.addEventListener("animationend", e => cont.classList.remove("animate"))
+   cont_img.addEventListener("load", e => loader.style.display = "none")
 
 }
 
