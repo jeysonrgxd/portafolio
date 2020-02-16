@@ -438,6 +438,32 @@ figure.logo img {
   font-family: 'Source Sans Pro', sans-serif;
 }
 
+.resp-email{
+  /* font-weight: bold; */
+  display: none;
+  padding: 10px;
+  border-radius: .25em;
+  color: #155724;
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+  animation: animate 1 .4s ease-in;
+}
+.resp-email p{
+  margin: 0;
+}
+
+@keyframes animate{
+  0%{
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100%{
+    opacity: 1;
+
+    transform: translateY(0);
+
+  }
+}
 .container {
   /* border: 1px solid red; */
   max-width: 1000px;
@@ -615,6 +641,9 @@ figure.logo img {
 
   .event img {
     width: 100%;
+  }
+  .resp-email{
+    margin: 10px 0;
   }
 }
 

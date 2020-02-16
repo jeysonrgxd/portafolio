@@ -9,6 +9,7 @@ const modal_cont_img = modal_img.querySelector(".modal-cont-img")
 const loader_modal = modal_img.querySelector(".lds-ring")
 const btnMas = document.querySelector(".cargar-mas")
 const form_data = document.querySelector(".form-email")
+const resp_message = document.querySelector(".resp-email")
 let count = 0
 
 function validation(event) {
@@ -68,10 +69,19 @@ form_data.addEventListener("submit",(e)=>{
       return resp.json()
    }) 
    .then(resp =>{
-      console.log(resp)
+      if(resp.ok){
+         resp_message.style.display= "block"
+         e.target.reset()
+         desbanecer(resp_message)
+      }
    })
 
 })
+function desbanecer(element){
+   setTimeout(() => {
+      element.style.display = "none"
+   }, 3500);
+}
 
 if (!ipad.matches) modalScript(modal_img, loader_modal, modal_cont_img)
 ipad.addListener(validation)
