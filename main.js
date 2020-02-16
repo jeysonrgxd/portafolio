@@ -8,6 +8,7 @@ const modal_img = document.querySelector(".modal-project")
 const modal_cont_img = modal_img.querySelector(".modal-cont-img")
 const loader_modal = modal_img.querySelector(".lds-ring")
 const btnMas = document.querySelector(".cargar-mas")
+const form_data = document.querySelector(".form-email")
 let count = 0
 
 function validation(event) {
@@ -47,6 +48,24 @@ function moreArticle (){
 
 btnMas.addEventListener("click",(e)=>{
    moreArticle();
+})
+form_data.addEventListener("submit",(e)=>{
+   e.preventDefault()
+   let form = new FormData(e.target)
+   fetch("https://frozen-fjord-75081.herokuapp.com/clientePort",{
+      method:"POST",
+      headers: {
+         'Content-Type': 'application/x-www-form-url-encoded'
+      },
+      body:form
+   })
+   .then(resp =>{
+      return resp.json()
+   })
+   .then(resp =>{
+      console.log(resp)
+   })
+
 })
 modalScript(modal_img, loader_modal, modal_cont_img)
 ipad.addListener(validation)
