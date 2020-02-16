@@ -237,22 +237,25 @@ figure.logo img {
 
 }
 /* ======== Boton cargas mas ========= */
-.cont-btn-mas button{
+.cont-btn-mas button {
   display: block;
   margin: 0 auto;
   padding: 10px 20px;
   border: 1px solid var(--fondo);
-  background-color: transparent;
-  color: var(--fondo);
+  background-color: var(--fondo);
+  color: #fff;
   border-radius: 5px;
   font-size: 20px;
   cursor: pointer;
   transition: all .3s ease-out;
+  outline: none;
 } 
 
 .cont-btn-mas button:hover{
- background-color: var(--fondo);
- color: #fff;
+ color: var(--fondo);
+  background-color: transparent;
+  border: 1px solid var(--fondo);
+
 }
 
 .flexbox {
@@ -471,6 +474,7 @@ figure.logo img {
   }
   .portfolio {
     padding: 0;
+    padding-bottom: 20px;
   }
   .container {
     padding: 0 1em;

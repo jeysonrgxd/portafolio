@@ -1,6 +1,6 @@
 import modalScript from './js/modal.JS'
 
-const ipad = window.matchMedia('screen and (max-width: 767px)')
+const ipad = window.matchMedia('screen and (max-width: 800px)')
 const menu = document.querySelector('.menu')
 const portafolio_cont = document.querySelector(".portfolio .container")
 const burgerButton = document.querySelector('#burger-menu')
@@ -30,6 +30,8 @@ function hideShow() {
 function moreArticle (){
    if(count > 0){
       btnMas.disabled = true
+      btnMas.textContent = "😰"
+      btnMas.title = "Ya no hay mas 😅"
       return false
 
    } else {
@@ -47,8 +49,9 @@ function moreArticle (){
 }
 
 btnMas.addEventListener("click",(e)=>{
-   moreArticle();
+   moreArticle(); 
 })
+
 form_data.addEventListener("submit",(e)=>{
    e.preventDefault() 
    let form = new FormData(e.target) // es tipo multipart/form-data
@@ -69,6 +72,7 @@ form_data.addEventListener("submit",(e)=>{
    })
 
 })
-modalScript(modal_img, loader_modal, modal_cont_img)
+
+if (!ipad.matches) modalScript(modal_img, loader_modal, modal_cont_img)
 ipad.addListener(validation)
 validation(ipad);
