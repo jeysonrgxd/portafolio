@@ -50,18 +50,20 @@ btnMas.addEventListener("click",(e)=>{
    moreArticle();
 })
 form_data.addEventListener("submit",(e)=>{
-   e.preventDefault()
-   let form = new FormData(e.target)
-   fetch("https://frozen-fjord-75081.herokuapp.com/clientePort",{
+   e.preventDefault() 
+   let form = new FormData(e.target) // es tipo multipart/form-data
+   let params = new URLSearchParams(form)
+   fetch("https://frozen-fjord-75081.herokuapp.com/clientePort", {
       method:"POST",
-      headers: {
-         'Content-Type': 'application/x-www-form-url-encoded'
-      },
-      body:form
+      // body: `email=${e.target.email.value}&mensaje=${e.target.mensaje.value}`,
+      body: params.toString(),
+      headers:{
+         'Content-Type': 'application/x-www-form-urlencoded'
+      }
    })
    .then(resp =>{
       return resp.json()
-   })
+   }) 
    .then(resp =>{
       console.log(resp)
    })
